@@ -21,14 +21,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from instantnoodlep device
 $(call inherit-product, device/oneplus/instantnoodlep/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit Scorpion GSM telephony parts
+$(call inherit-product, vendor/scorpion/config/gsm.mk)
 
-PRODUCT_NAME := lineage_instantnoodlep
+# Inherit Scorpion product configuration
+$(call inherit-product, vendor/scorpion/config/common.mk)
+
+PRODUCT_NAME := scorpion_instantnoodlep
 PRODUCT_DEVICE := instantnoodlep
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := ONEPLUS IN2023
+PRODUCT_MODEL := ONEPLUS IN2025
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
